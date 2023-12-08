@@ -1,0 +1,22 @@
+Bienvenido a los pasos para mejorar y actualizar un entorno de desarrollo, aplicaquermos temas que cambien los colores de la terminal, como cambiarle la estructura por completo
+a continuacion sigue estos pasos para conseguir una customizacion de tu entorno al 100%.
+
+Pasos OHMYPOSH:
+
+1. Instalar la aplicacion terminal en la microsoft Store
+2. Instalar Powershell en la Microsoft Store.
+3. Abrir el navegador he ir a la siguien URL a segur los pasos de instalacion de OH MY POSH:  https://ohmyposh.dev/docs/installation/windows
+4. luego de instalar OH MY POSH ejecuto esta line de codigo: "oh-my-posh font install" he instalar la fuente que se llama "HACK"
+5. Ejecutar el siguiente codigo "get-PoshThemes" esto descargara un listado de temas y de ultimo les dara la ruta donde se guardaron la copian que la usaremos mas adelante
+6. Ejecutamos esta linea de codigo "New-Item -Path $PROFILE -Type File -Force" que creara un archivo de configuracion para los fondos en la variable de entorno $PROFILE
+7. Luego ejecutamos notepad $PROFILE en donde abrira un bloc de notas.
+8. En el blok de notas pegamos la siguiente linea "oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\aqui_va_el_nombre_del_tema.omp.json" " y guardamos el archivo
+9. En la carpeta donde estan estas instrucciones se encuentra un thema customizado propio que no se encuentra en OHMYPOSH que es nanotech.
+10. Cerrar la terminal y el block de notas.
+
+Pasos color terminal:
+1. Abrir el archivo gruvbox de la carpeta donde se encuentra esta guia, copiar el codigo que se encuentra dentro.
+2. Abrir la configuracion de la terminal y darle click en abrir archivo JSON.
+3. en la etiqueta schemas pegar el codigo copiado anteriormente guardar y cerrar todo. 
+
+Listo!! Tu terminal quedo minimalista y personalizada!  
