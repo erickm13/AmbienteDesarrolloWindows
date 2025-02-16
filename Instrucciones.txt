@@ -13,6 +13,8 @@ Pasos OHMYPOSH:
 8. En el blok de notas pegamos la siguiente linea "oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\aqui_va_el_nombre_del_tema.omp.json" " y guardamos el archivo
 9. En la carpeta donde estan estas instrucciones se encuentra un thema customizado propio que no se encuentra en OHMYPOSH que es nanotech.
 10. Cerrar la terminal y el block de notas.
+NOTA: En el este repositorio  se agrego un archivo llamado Microsoft.PowerShell_profile.ps1 que tiene las configuraciones mas recientes. 
+
 
 Pasos color terminal:
 1. Abrir el archivo gruvbox de la carpeta donde se encuentra esta guia, copiar el codigo que se encuentra dentro.
