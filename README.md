@@ -38,6 +38,7 @@ Aquí aprenderás a personalizar tu terminal con temas visuales, fuentes moderna
    ```
 
    Esto descargará los temas y mostrará la ruta donde fueron guardados (anótala).
+   **🔸 Nota importante:** También debes colocar tu archivo `nanotech.omp.json` en esa misma ruta si quieres que aparezca como parte de los temas disponibles.
 
 6. **Crear archivo de configuración del perfil**
    Ejecuta:
