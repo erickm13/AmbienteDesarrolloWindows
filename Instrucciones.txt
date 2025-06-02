@@ -1,24 +1,99 @@
-Bienvenido a los pasos para mejorar y actualizar un entorno de desarrollo, aplicaquermos temas que cambien los colores de la terminal, como cambiarle la estructura por completo
-a continuacion sigue estos pasos para conseguir una customizacion de tu entorno al 100%.
+# ✨ Guía de Personalización Completa de tu Terminal (Windows + Oh My Posh)
 
-Pasos OHMYPOSH:
+¡Bienvenido a esta guía para transformar y mejorar completamente tu entorno de desarrollo en Windows!
+Aquí aprenderás a personalizar tu terminal con temas visuales, fuentes modernas y configuraciones eficientes usando **Oh My Posh** y un esquema de color atractivo.
 
-1. Instalar la aplicacion terminal en la microsoft Store
-2. Instalar Powershell en la Microsoft Store.
-3. Abrir el navegador he ir a la siguien URL a segur los pasos de instalacion de OH MY POSH:  https://ohmyposh.dev/docs/installation/windows
-4. luego de instalar OH MY POSH ejecuto esta line de codigo: "oh-my-posh font install" he instalar la fuente que se llama "HACK"
-5. Ejecutar el siguiente codigo "get-PoshThemes" esto descargara un listado de temas y de ultimo les dara la ruta donde se guardaron la copian que la usaremos mas adelante
-6. Ejecutamos esta linea de codigo "New-Item -Path $PROFILE -Type File -Force" que creara un archivo de configuracion para los fondos en la variable de entorno $PROFILE
-7. Luego ejecutamos notepad $PROFILE en donde abrira un bloc de notas.
-8. En el blok de notas pegamos la siguiente linea "oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\aqui_va_el_nombre_del_tema.omp.json" " y guardamos el archivo
-9. En la carpeta donde estan estas instrucciones se encuentra un thema customizado propio que no se encuentra en OHMYPOSH que es nanotech.
-10. Cerrar la terminal y el block de notas.
-NOTA: En el este repositorio  se agrego un archivo llamado Microsoft.PowerShell_profile.ps1 que tiene las configuraciones mas recientes. 
+![preview terminal](https://ohmyposh.dev/img/posh-preview.gif)
 
+---
 
-Pasos color terminal:
-1. Abrir el archivo gruvbox de la carpeta donde se encuentra esta guia, copiar el codigo que se encuentra dentro.
-2. Abrir la configuracion de la terminal y darle click en abrir archivo JSON.
-3. en la etiqueta schemas pegar el codigo copiado anteriormente guardar y cerrar todo. 
+## 🧩 Pasos para Instalar y Configurar Oh My Posh
 
-Listo!! Tu terminal quedo minimalista y personalizada!  
+1. **Instalar la Terminal de Windows**
+   Descárgala desde la [Microsoft Store](https://aka.ms/terminal).
+
+2. **Instalar PowerShell**
+   También desde la [Microsoft Store](https://aka.ms/powershell).
+
+3. **Instalar Oh My Posh**
+   Abre tu navegador y sigue los pasos de instalación desde la siguiente URL:
+   👉 [https://ohmyposh.dev/docs/installation/windows](https://ohmyposh.dev/docs/installation/windows)
+
+4. **Instalar fuentes recomendadas**
+   Ejecuta el siguiente comando en PowerShell:
+
+   ```powershell
+   oh-my-posh font install
+   ```
+
+   Selecciona e instala la fuente llamada **Hack**.
+
+5. **Ver temas disponibles**
+   Ejecuta:
+
+   ```powershell
+   Get-PoshThemes
+   ```
+
+   Esto descargará los temas y mostrará la ruta donde fueron guardados (anótala).
+
+6. **Crear archivo de configuración del perfil**
+   Ejecuta:
+
+   ```powershell
+   New-Item -Path $PROFILE -Type File -Force
+   ```
+
+7. **Editar el archivo de configuración**
+   Abre el perfil con:
+
+   ```powershell
+   notepad $PROFILE
+   ```
+
+8. **Activar un tema en tu perfil**
+   Pega la siguiente línea en el archivo (reemplaza por el nombre del tema que quieras usar):
+
+   ```powershell
+   oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\NOMBRE_DEL_TEMA.omp.json"
+   ```
+
+   ✅ Guarda y cierra el archivo.
+
+9. **Usar un tema personalizado**
+   En la carpeta de este proyecto se incluye un tema personalizado llamado **`nanotech.omp.json`** que no está disponible en los temas oficiales. Puedes configurarlo así:
+
+   ```powershell
+   oh-my-posh init pwsh --config "RUTA_DEL_TEMA\nanotech.omp.json"
+   ```
+
+10. **Cierra y vuelve a abrir la terminal** para ver los cambios aplicados.
+
+> **Nota:** Este repositorio incluye un archivo llamado `Microsoft.PowerShell_profile.ps1` con las configuraciones más recientes. Puedes usarlo directamente para no hacerlo desde cero.
+
+---
+
+## 🎨 Cambiar el Esquema de Colores (Gruvbox)
+
+1. Abre el archivo `gruvbox.json` que se encuentra en esta misma carpeta.
+2. Copia todo su contenido.
+3. Abre la Terminal de Windows → Menú desplegable (⌑) → **Configuración** → Abre el archivo JSON.
+4. Dentro del archivo JSON, busca la etiqueta `"schemes"` y pega el contenido copiado dentro de ese arreglo.
+5. Guarda y cierra el archivo JSON.
+
+> Ejemplo de colores Gruvbox:
+>
+> ![Gruvbox Example](https://raw.githubusercontent.com/morhetz/gruvbox/master/screenshot.png)
+
+---
+
+## ✅ ¡Listo!
+
+Tu terminal ahora tiene un estilo **minimalista**, **moderno** y **totalmente personalizado**.
+Disfruta de una experiencia de desarrollo más agradable y productiva 🚀
+
+---
+
+## 🇬🇧 English Version Coming Soon...
+
+*Would you like this guide in English? Let me know and I’ll add it as a second section.*
