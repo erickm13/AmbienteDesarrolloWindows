@@ -5,6 +5,8 @@ Aquí aprenderás a personalizar tu terminal con temas visuales, fuentes moderna
 
 ![preview terminal](https://ohmyposh.dev/img/posh-preview.gif)
 
+> ⚠️ **Requisito previo:** Asegúrate de tener instalado [Chocolatey](https://chocolatey.org/install) antes de comenzar si deseas usar el autocompletado para `choco` y otras utilidades.
+
 ---
 
 ## 🧩 Pasos para Instalar y Configurar Oh My Posh
@@ -51,25 +53,34 @@ Aquí aprenderás a personalizar tu terminal con temas visuales, fuentes moderna
    notepad $PROFILE
    ```
 
-8. **Activar un tema en tu perfil**
-   Pega la siguiente línea en el archivo (reemplaza por el nombre del tema que quieras usar):
+8. **Configurar tu perfil con herramientas adicionales y personalización avanzada**
+   Pega las siguientes líneas en el archivo:
 
    ```powershell
-   oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\NOMBRE_DEL_TEMA.omp.json"
+   oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\nanotech.omp.json" | Invoke-Expression
+
+   Import-Module Terminal-Icons
+   Set-PSReadLineOption -PredictionViewStyle ListView
+
+   # Importar el perfil de Chocolatey para habilitar autocompletado
+   $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+   if (Test-Path($ChocolateyProfile)) {
+     Import-Module "$ChocolateyProfile"
+   }
+
+   Import-Module PSFzf
+   $env:FZF_DEFAULT_OPTS='--height 80% --layout=reverse --border'
+
+   function ff {
+       code $(fzf --preview "bat --color=always --style=numbers --line-range=:500 {}")
+   }
    ```
 
    ✅ Guarda y cierra el archivo.
 
-9. **Usar un tema personalizado**
-   En la carpeta de este proyecto se incluye un tema personalizado llamado **`nanotech.omp.json`** que no está disponible en los temas oficiales. Puedes configurarlo así:
+9. **Cerrar y volver a abrir la terminal** para aplicar todos los cambios.
 
-   ```powershell
-   oh-my-posh init pwsh --config "RUTA_DEL_TEMA\nanotech.omp.json"
-   ```
-
-10. **Cierra y vuelve a abrir la terminal** para ver los cambios aplicados.
-
-> **Nota:** Este repositorio incluye un archivo llamado `Microsoft.PowerShell_profile.ps1` con las configuraciones más recientes. Puedes usarlo directamente para no hacerlo desde cero.
+> **Nota:** Este repositorio incluye un archivo llamado `Microsoft.PowerShell_profile.ps1` con todas estas configuraciones ya preparadas.
 
 ---
 
@@ -89,11 +100,7 @@ Aquí aprenderás a personalizar tu terminal con temas visuales, fuentes moderna
 
 ## ✅ ¡Listo!
 
-Tu terminal ahora tiene un estilo **minimalista**, **moderno** y **totalmente personalizado**.
+Tu terminal ahora tiene un estilo **minimalista**, **moderno** y **totalmente personalizado**, con herramientas potentes como `fzf`, `bat`, `Terminal-Icons` y autocompletado para `choco`.
 Disfruta de una experiencia de desarrollo más agradable y productiva 🚀
 
 ---
-
-## 🇬🇧 English Version Coming Soon...
-
-*Would you like this guide in English? Let me know and I’ll add it as a second section.*
