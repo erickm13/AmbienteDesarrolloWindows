@@ -83,7 +83,7 @@ Aquí aprenderás a personalizar tu terminal con temas visuales, fuentes moderna
 
 > Ejemplo de colores Gruvbox:
 >
-> ![Gruvbox Example]([https://raw.githubusercontent.com/morhetz/gruvbox/master/screenshot.png](https://i.imgur.com/wa666xg.png))
+> ![Gruvbox Example](https://i.imgur.com/wa666xg.png)
 
 ---
 
